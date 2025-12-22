@@ -16,7 +16,7 @@ All virtual machines are connected to the same **VirtualBox NAT Network**.
 
 ---
 
-## VirtualBox Network Configuration
+## 1. VirtualBox Network Configuration
 
 ## Splunk Server Configuration (Ubuntu)
 
@@ -26,4 +26,16 @@ Edit the netplan configuration:
 
 ```bash
 sudo nano /etc/netplan/00-installer-config.yaml
+```
+Apply changes:
+
+```bash
+sudo netplan apply
+```
+
+## 2. Splunk Universal Forwarder (Windows 10 & AD Server)
+
+Rename Machines
+ - Windows Server → `ADDS-01`
+ - Windows 10 → `target-PC`
 
