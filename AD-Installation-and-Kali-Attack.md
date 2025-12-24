@@ -123,11 +123,11 @@ After reboot:
 
 1. Right-click: `cloud.local`
 2. Select: `New → Organizational Unit`
-3. Name: `IT`
+3. Name: `Sales`
 
-### Create User in IT OU
+### Create User in Sales OU
 
-1. Right-click inside **IT OU**
+1. Right-click inside **Sales OU**
 2. Select: `New → User`
 3. Enter details:
    `First Name: Will`
