@@ -20,7 +20,7 @@ All virtual machines are connected to the same **VirtualBox NAT Network**.
 | Windows 10 | Domain Client (Target) | 192.168.10.100 |
 | Kali Linux | Attacker | 192.168.10.20 |
 
-![pfSense Firewall Lab topology](https://github.com/Niharika80/pfSense-Firewall-Lab/blob/4621b3d6e1ccd42388671008b5de2c54cb87d25a/images/Firewall%20.png)
+![Network topology](https://github.com/Niharika80/Active-Directory-Project-/blob/4506e85db3089385dd8a030ab95a00f2285904c6/images/1.png)
 
 ---
 
