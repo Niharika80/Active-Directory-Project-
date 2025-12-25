@@ -35,7 +35,7 @@ Edit the netplan configuration:
 ```bash
 sudo nano /etc/netplan/00-installer-config.yaml
 ```
-![pfSense Firewall Lab topology](https://github.com/Niharika80/pfSense-Firewall-Lab/blob/4621b3d6e1ccd42388671008b5de2c54cb87d25a/images/Firewall%20.png)
+![netplan](https://github.com/Niharika80/Active-Directory-Project-/blob/089a4904c646310e0caa97df0b60edd119526072/images/Screenshot%202025-12-25%20115034.png)
 
 Apply changes:
 
@@ -55,15 +55,11 @@ Install Splunk UF
  - Receiving Host: `192.168.10.10`
  - Port: `9997`
 
-![pfSense Firewall Lab topology](https://github.com/Niharika80/pfSense-Firewall-Lab/blob/4621b3d6e1ccd42388671008b5de2c54cb87d25a/images/Firewall%20.png)
-
 inputs.conf
 
-![pfSense Firewall Lab topology](https://github.com/Niharika80/pfSense-Firewall-Lab/blob/4621b3d6e1ccd42388671008b5de2c54cb87d25a/images/Firewall%20.png)
+![input conf](https://github.com/Niharika80/Active-Directory-Project-/blob/f29692555614f423478b39304a07c64a2997e728/images/2.png)
 
 Run UF as Local System and restart the service.
-
-![pfSense Firewall Lab topology](https://github.com/Niharika80/pfSense-Firewall-Lab/blob/4621b3d6e1ccd42388671008b5de2c54cb87d25a/images/Firewall%20.png)
 
 ---
 
@@ -75,10 +71,12 @@ Run UF as Local System and restart the service.
 
 3. Add port: 9997
 
+![port](https://github.com/Niharika80/Active-Directory-Project-/blob/f29692555614f423478b39304a07c64a2997e728/images/3.png)
+
 4. Verify logs:
        `index = endpoint`
 
-![pfSense Firewall Lab topology](https://github.com/Niharika80/pfSense-Firewall-Lab/blob/4621b3d6e1ccd42388671008b5de2c54cb87d25a/images/Firewall%20.png)
+![splunk log](https://github.com/Niharika80/Active-Directory-Project-/blob/03c66fdeda05c00081213a322b793cde19ddc366/images/10.png)
 
 ---
 
@@ -94,6 +92,7 @@ Run UF as Local System and restart the service.
 7. Continue with default options
 8. Click **Install**
 
+![adds](https://github.com/Niharika80/Active-Directory-Project-/blob/7bd1c7620c144c819848f849874561dc326808e5/images/Screenshot%202025-12-25%20113141.png)
 
 ### Promote Server to Domain Controller
 
@@ -119,6 +118,8 @@ After reboot:
 - Login user should appear as: `CLOUD\Administrator`
 - Open: `Server Manager → Tools → Active Directory Users and Computers`
 
+![domain](https://github.com/Niharika80/Active-Directory-Project-/blob/7bd1c7620c144c819848f849874561dc326808e5/images/Screenshot%202025-12-25%20111811.png)
+
 ### Create Organizational Units & Users
 
 1. Right-click: `cloud.local`
@@ -137,7 +138,7 @@ After reboot:
 4. Set password
 5. Click **Finish**
 
-![pfSense Firewall Lab topology](https://github.com/Niharika80/pfSense-Firewall-Lab/blob/4621b3d6e1ccd42388671008b5de2c54cb87d25a/images/Firewall%20.png)
+![user](https://github.com/Niharika80/Active-Directory-Project-/blob/f29692555614f423478b39304a07c64a2997e728/images/5.png)
 
 ---
 
@@ -151,7 +152,7 @@ After reboot:
 4. Select: `Domain`
 5. Enter: `CLOUD.LOCAL`
 
-![pfSense Firewall Lab topology](https://github.com/Niharika80/pfSense-Firewall-Lab/blob/4621b3d6e1ccd42388671008b5de2c54cb87d25a/images/Firewall%20.png)
+![join windows10](https://github.com/Niharika80/Active-Directory-Project-/blob/f29692555614f423478b39304a07c64a2997e728/images/7.png)
 
 ### Set Preferred DNS Server
 
@@ -162,6 +163,8 @@ After reboot:
 5. Double-click: `Internet Protocol Version 4 (TCP/IPv4)`
 6. Set: `Preferred DNS Server: 192.168.10.8 (your AD's IP)`
 7. Click **OK** and close all network configuration windows.
+
+![dns server](https://github.com/Niharika80/Active-Directory-Project-/blob/f29692555614f423478b39304a07c64a2997e728/images/6.png)
 
 ### Verify DNS Configuration
 
@@ -184,6 +187,8 @@ After reboot:
   1. On the login screen, select: `Other User`
   2. Verify the domain displayed is: `CLOUD`
   3. Login using a domain user created earlier: `wbyer`
+
+![wbyer](https://github.com/Niharika80/Active-Directory-Project-/blob/f29692555614f423478b39304a07c64a2997e728/images/8.png)
 
 ---
 
@@ -231,7 +236,7 @@ This section demonstrates an RDP brute-force attack from Kali Linux against a do
    ```bash
    nano passwords.txt
    ```
-
+![password](https://github.com/Niharika80/Active-Directory-Project-/blob/7bd1c7620c144c819848f849874561dc326808e5/images/Screenshot%202025-12-15%20120907.png)
 
 ### Enable Remote Desktop on Target Machine
 
@@ -244,6 +249,8 @@ On Windows 10 (Target):
   6. Click Select Users
   7. Add domain users: `wbyer`
   8. Click Apply
+
+![remote ](https://github.com/Niharika80/Active-Directory-Project-/blob/f29692555614f423478b39304a07c64a2997e728/images/9.png)
 
 ### Execute RDP Brute Force Attack (Hydra)
 
@@ -266,11 +273,14 @@ Search Query
  ```spl
 index="endpoint" wbyer
 ```
+![brute force ](https://github.com/Niharika80/Active-Directory-Project-/blob/089a4904c646310e0caa97df0b60edd119526072/images/11.png)
 
 Observed Events
 - Event ID: `4625` — Failed Logon
 - Source IP: `192.168.10.20` (Kali Linux)
 - Pattern: Multiple failures in a short time window
+
+![kali ip](https://github.com/Niharika80/Active-Directory-Project-/blob/089a4904c646310e0caa97df0b60edd119526072/images/12.png)
 
 This behavior is indicative of brute-force attack activity.
 
