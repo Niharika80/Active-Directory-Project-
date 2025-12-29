@@ -7,7 +7,7 @@ attack simulation, detection, and hardening.
 
 1. [AD Installation & Kali Attack](AD-Installation-and-Kali-Attack.md)
 2. [Atomic Red Team Analysis](Atomic-Red-Team-Analysis.md)
-3. [Group Policy Hardening](Group-Policy-Hardening)
+3. [Group Policy Hardening](Group-Policy-Hardening.md)
 
 ## Network Architecture
 
