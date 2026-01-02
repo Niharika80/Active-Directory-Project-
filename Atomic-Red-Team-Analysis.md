@@ -101,15 +101,15 @@ Splunk search example:
 - Multiple accounts show different execution paths (PowerShell, CMD, Admin)
 - Event logs demonstrate persistence activity and detection capability
   
-## Execution via Admin
+## Account created – Admin labeled simulation 
 
 ![splunk](https://github.com/Niharika80/Active-Directory-Project-/blob/75014fc325e10db04346c350cb609ad1f6cd0942/images/Screenshot%202025-12-28%20104608.png)
 
-## Execution via PowerShell
+## Account created – PowerShell-labeled simulation
 
 ![splunk](https://github.com/Niharika80/Active-Directory-Project-/blob/75014fc325e10db04346c350cb609ad1f6cd0942/images/Screenshot%202025-12-28%20104545.png)
 
-## Execution via CMD
+## Account created – CMD-labeled simulation
 ![splunk](https://github.com/Niharika80/Active-Directory-Project-/blob/75014fc325e10db04346c350cb609ad1f6cd0942/images/Screenshot%202025-12-28%20104527.png)
 
 ---
